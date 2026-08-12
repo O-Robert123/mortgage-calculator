@@ -28,7 +28,7 @@ submitButton.addEventListener('click', function (event) {
         const error = input.closest('div').parentElement.querySelector('.error-message')
         const unit = input.closest('div').querySelector('.unit-box')
         const inputContainer = input.closest('div').parentElement.querySelector('.input-container')
-        if (input.value.trim() === '' || input.value.trim() === 0) {
+        if (input.value.trim() === '' || Number(input.value.trim()) === 0) {
             error.classList.add('block')
             error.classList.remove('none')
             unit.classList.add('error2')
