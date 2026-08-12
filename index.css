@@ -1,0 +1,423 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(202, 86%, 94%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+p {
+    font-size: 16px;
+}
+
+.container {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    border-radius: 20px;
+    height: 73%;
+}
+
+form {
+    width: 50%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-top h2 {
+    color: hsl(202, 55%, 16%);
+}
+
+#clear-btn {
+    border: none;
+    background-color: transparent;
+}
+
+#clear-btn p {
+    color: hsl(200, 24%, 40%);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+#clear-btn p:hover {
+    cursor: pointer;
+    color: hsl(202, 55%, 16%);
+}
+
+.mortgage-amount {
+    margin-bottom: 10px;
+}
+
+.input-container {
+    border: 1px solid hsl(200, 24%, 40%);
+    height: 50px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.input-container:hover {
+    border: 1px solid hsl(202, 55%, 16%);
+}
+
+.input-container:focus-within {
+    border: 2px solid hsl(61, 70%, 52%);
+
+    .unit-box {
+        background-color: hsl(61, 70%, 52%);
+    }
+}
+
+.input-container.error {
+    border: 2px solid hsl(4, 69%, 50%);
+}
+
+.unit-box.error2 {
+    background-color: hsl(4, 69%, 50%);
+    color: white;
+}
+
+.one {
+    width: 100%;
+}
+
+.one input {
+    width: 100%;
+}
+
+input {
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 0px 10px;
+    font-size: 16px;
+    color: hsl(202, 55%, 16%);
+    font-weight: 600;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+input:focus {
+    outline: none;
+}
+
+.unit-box {
+    background-color: hsl(202, 86%, 94%);
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pounds {
+    border-radius: 5px 0px 0px 5px;
+    color: hsl(200, 24%, 40%);
+    font-weight: 700;
+}
+
+.years,
+.percentage {
+    border-radius: 0px 5px 5px 0px;
+    color: hsl(200, 24%, 40%);
+    font-weight: 700;
+}
+
+label {
+    color: hsl(200, 24%, 40%);
+    font-size: 16px;
+}
+
+form h3 {
+    color: hsl(202, 55%, 16%);
+}
+
+.term-rate {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.term-rate>div {
+    flex: 1;
+}
+
+.term-rate>div input {
+    width: 100%;
+}
+
+.mortgage-type {
+    margin-bottom: 10px;
+}
+
+.radio-options {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.radio-options div {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+}
+
+.radio-options label {
+    border: 1px solid hsl(200, 24%, 40%);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: hsl(202, 55%, 16%);
+    font-weight: 700;
+}
+
+.radio-options>label>input {
+    margin-left: 20px;
+    scale: 1.5;
+}
+
+.radio-options>label:hover {
+    cursor: pointer;
+    border: 2px solid hsl(61, 70%, 52%);
+}
+
+.calculate-btn {
+    height: 50px;
+    background-color: hsl(61, 70%, 52%);
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: hsl(202, 55%, 16%);
+    width: 70%;
+    margin: 10px 0px;
+}
+
+.calculate-btn:hover {
+    cursor: pointer;
+    filter: opacity(0.8);
+}
+
+.right {
+    background-color: hsl(202, 55%, 16%);
+    width: 50%;
+    height: 100%;
+    border-radius: 0px 20px 20px 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.right img {
+    margin-bottom: 10px;
+}
+
+.right h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.right p {
+    color: hsl(203, 41%, 72%);
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+input[type='radio'] {
+    accent-color: hsl(61, 70%, 52%);
+}
+
+.lime-bg {
+    background-color: hsl(61, 86%, 89%);
+}
+
+label.lime-bg {
+    border: 1px solid hsl(61, 70%, 52%);
+}
+
+.error-message {
+    color: hsl(4, 69%, 50%);
+    margin-top: 10px;
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+
+.complete {
+    background-color: hsl(202, 55%, 16%);
+    width: 50%;
+    height: 100%;
+    border-radius: 0px px 0px 100px;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.complete h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.complete p {
+    color: hsl(203, 41%, 72%);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.monthly-box p:nth-child(1),
+.full-payment-box p:nth-child(1) {
+    margin-bottom: 10px;
+}
+
+.value-box {
+    padding: 30px;
+    height: auto;
+    width: 100%;
+    background-color: hsl(202, 55%, 16%);
+    filter: brightness(80%);
+    box-shadow: 0px -5px hsl(61, 70%, 52%);
+    border-radius: 5px;
+    border: none;
+}
+
+#monthly-repayment {
+    color: hsl(61, 70%, 52%);
+    font-size: 60px;
+    font-weight: 600;
+}
+
+#total-repayment {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0px;
+}
+
+@media (max-width: 640px) {
+    body {
+    height: auto;
+}
+    
+    .container {
+        flex-direction: column;
+        align-items: unset;
+        justify-content: unset;
+        width: 100%;
+        height: 100%;
+    }
+
+    form {
+        width: 100%;
+        height: 100%;
+        padding: 30px;
+        gap: 10px;
+    }
+
+    .form-top {
+        display: flex;
+        flex-direction: column;
+        align-items: unset;
+        gap: 10px;
+    }
+
+    #clear-btn p {
+        justify-self: left;
+    }
+
+    .term-rate {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .calculate-btn {
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .complete {
+        width: 100%;
+    }
+
+    .complete p {
+        margin-bottom: 30px;
+    }
+
+    hr {
+        margin: 20px 0px;
+    }
+
+    #monthly-repayment {
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+
+    #total-repayment {
+        font-size: 22px;
+    }
+
+    .complete h2 {
+        margin-bottom: 10px;
+    }
+
+    .monthly-box p:nth-child(1),
+    .full-payment-box p:nth-child(1) {
+        margin-bottom: 5px;
+    }
+
+    input {
+        padding: 0px 15px;
+    }
+}
