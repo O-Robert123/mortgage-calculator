@@ -342,7 +342,7 @@ label.lime-bg {
     margin: 0px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     body {
     height: auto;
 }
