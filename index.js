@@ -8,6 +8,16 @@ radioInputs.forEach(option => {
         })
     })
 })
+    const mortgageAmount = document.querySelector('#amount')
+mortgageAmount.addEventListener('blur', () => {
+    
+    const mortgageAmountValue = mortgageAmount.value.replaceAll(',', '')
+    const formattedAmount = Number(mortgageAmountValue).toLocaleString('en-GB', {
+        maximumFractionDigits: 2
+    })
+    mortgageAmount.value = formattedAmount
+})
+
 const mortgageTerm = document.querySelector('.two input')
 mortgageTerm.addEventListener('input', () => {
     if (mortgageTerm.value > 100) {
@@ -55,7 +65,7 @@ submitButton.addEventListener('click', function (event) {
         error.classList.add('none')
     }
 
-    const amount = Number(document.querySelector('#amount').value)
+    const amount = Number(document.querySelector('#amount').value.replaceAll(',', ''))
     const term = Number(document.querySelector('#term').value)
     const rate = Number(document.querySelector('#rate').value)
     let monthlyRate, monthlyTotal
@@ -113,3 +123,4 @@ clear.addEventListener('click', () => {
     document.querySelector('.right').classList.remove('none')
     document.querySelector('.right').classList.add('flex')
 })
+
